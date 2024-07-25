@@ -35,7 +35,12 @@ export const LoginUsingGoogle = async (req, res) => {
         const user = await User.findOne({ email });
         if (user) {
             const token = jwt.sign({ userId: user._id }, process.env.TOKEN_SECRET, { expiresIn: "1d" });
-            return res.cookie("token", token, { expiresIn: "1d" }).json({
+            return res.status(201).cookie("token", token, {
+                httpOnly: true,
+                sameSite: 'none',
+                secure: true,
+                expires: new Date(Date.now() + 24 * 60 * 60 * 1000) // 1 day expiration
+            }).json({
                 message: `Welcome back ${user.name}!`,
                 success: true,
                 user
