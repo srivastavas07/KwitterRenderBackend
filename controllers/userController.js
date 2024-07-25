@@ -87,7 +87,7 @@ export const Login = async (req, res) => {
         return res.status(201).cookie("token", token, {
             httpOnly: true,
             sameSite: 'lax',
-            secure: true,
+            secure: false,
             expires: new Date(Date.now() + 24 * 60 * 60 * 1000) // 1 day expiration
         }).json({
             message: `Welcome back ${user.name}!`,
