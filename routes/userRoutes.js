@@ -18,19 +18,4 @@ router.route("/searchUser").post(isAuthenticated, searchUser);
 router.route("/googleLogin").post(LoginUsingGoogle);
 router.route("/notifications/:id").get(isAuthenticated,getNotification);
 
-// router.route("/register").post(Register);
-// router.route("/login").post(Login);
-// router.route("/logOut").get(LogOut);
-// router.route("/bookmark/:id").put(bookmark);
-// router.route("/profile/:id").get(getProfile);
-// router.route("/otherUsers/:id").get(otherUsers);
-// router.route("/follow/:id").put(followUnfollow);
-// router.route("/bookmarkedTweets/:id").get(bookmarkedTweets);
-// router.route("/edit/:id").put(editProfile);
-// router.route("/followers/:id").get(showFollowers);
-// router.route("/following/:id").get(showFollowing);
-// router.route("/searchUser").post(searchUser);
-// router.route("/googleLogin").post(LoginUsingGoogle);
-// router.route("/notifications/:id").get(getNotification);
-
 export default router;

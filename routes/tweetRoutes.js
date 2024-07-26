@@ -16,17 +16,4 @@ router.route("/comments/:id").get(isAuthenticated,getTweetComments);
 router.route("/reply").post(isAuthenticated,TweetReply);
 router.route("/chat-bot").get(isAuthenticated,ChatBot);
 
-
-// router.route("/create").post(createTweet);
-// router.route("/delete/:id").delete(deleteTweet);
-// //put method is used for updating something..
-// router.route("/likeOrDislike/:id").put(likeOrDislike);
-// router.route("/allTweets/:id").get(getAllTweets);
-// router.route("/followingTweets/:id").get(getFollowingTweets);
-// router.route("/userTweets/:id").get(getUserTweets);
-// router.route("/analyseSentiment").get(analyseSentiment);
-// router.route("/likedUsers/:id").get(getLikedUsers);
-// router.route("/comments/:id").get(getTweetComments);
-// router.route("/reply").post(TweetReply);
-// router.route("/chat-bot").get(ChatBot);
 export default router;
